@@ -6,7 +6,9 @@
 ![20220913_091108 Small](https://user-images.githubusercontent.com/110848452/189955362-441f21e7-a0d3-4c9c-a7ec-c5551429803a.jpeg)
 
 ### ERD
-![Screen Shot 2022-09-13 at 11 08 05 AM Small](https://user-images.githubusercontent.com/110848452/189964376-a6793b76-1f23-4d90-a1a5-eccf07589ca9.jpeg)
+![Screen Shot 2022-09-13 at 5 25 40 PM Small](https://user-images.githubusercontent.com/110848452/190027207-ca8110bc-fd9a-43bb-aeee-08547d963640.jpeg)
+
+
 
 ### RESTful Routing
 | Verb | URL Pattern | Action (CRUD)    | Description                             |
