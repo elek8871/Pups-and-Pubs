@@ -1,0 +1,8 @@
+{
+  "development": {
+    "database": "express_auth_boilerplate",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+ 
+}
