@@ -9,14 +9,15 @@
 ![Screen Shot 2022-09-13 at 11 08 05 AM Small](https://user-images.githubusercontent.com/110848452/189964376-a6793b76-1f23-4d90-a1a5-eccf07589ca9.jpeg)
 
 ### RESTful Routing
-| Verb | URL Pattern | Action (CRUD) | Description
-| GET  | /user       | index (Read)      | gets user information and logs them in 
-| GET  | /user/new   | new (Create)      | shows a form to register new user
-| GET  | /pubs       | index (Read)      | shows a list of pubs based on user queries
-| GET  | /pubs/:id   | show (Read        | list information about a specific pub
-| POST | /pubs       | new (Create)      | shows a form allowing the user to add a new pub to the db
-| PUT  | /pubs/edit/:id | update(Update) | shows a form allowing the user to update a specific pub
-| DELETE | /pubs/:id | destroy (Delete)  | deletes the pub from the data base 
+| Verb | URL Pattern | Action (CRUD)    | Description                             |
+|------|-------------|------------------|-----------------------------------------|
+| GET  | /user       | index (Read)      | gets user information and logs them in |
+| GET  | /user/new   | new (Create)      | shows a form to register new user       |
+| GET  | /pubs       | index (Read)      | shows a list of pubs based on user queries|
+| GET  | /pubs/:id   | show (Read        | list information about a specific pub    |
+| POST | /pubs       | new (Create)      | shows a form allowing the user to add a new pub to the db |
+| PUT  | /pubs/edit/:id | update(Update) | shows a form allowing the user to update a specific pub |
+| DELETE | /pubs/:id | destroy (Delete)  | deletes the pub from the data base |
 
 ### User Experience
 ##### 1. As a user, I want to go to a home page to search a database full of breweries.
