@@ -1,7 +1,7 @@
 const express =require("express")
 const router = express.Router()
 const db= require("../models")
-const crypto = require("crypto-js")
+const crypto = require("crypto-js")  
 const bcrypt= require("bcrypt")
 
 // GET /users/new -> renders form to create a new user

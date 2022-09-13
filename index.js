@@ -42,6 +42,6 @@ app.get ("/", (req, res)=>{
 
 // controllers
 app.use("/users", require ("./controllers/users"))
-
+app.use("/pubs", require ("./controllers/pubs"))
 // listen on a port
 app.listen(PORT, ()=> console.log (`hamsters are running on port: ${PORT} 🐹`))
