@@ -3,4 +3,16 @@ user model
 email: VARCHAR 255 (string)
 password: VARCHAR 255 (string)
 
+user model:
 sequelize model:create --name user --attributes email:string,password:string
+
+user_pubs:
+sequelize model:create --name user_pubs --attributes userId:integer,pubId:integer
+
+comments:
+sequelize model:create --name user_notes --attributes userId:integer,pubId:integer,comments:string
+
+pub:
+sequelize model:create --name pub  --attributes obdbId:string,name:string,address:string,phone:string
+
+https://api.openbrewerydb.org/breweries/{obdb-id}
