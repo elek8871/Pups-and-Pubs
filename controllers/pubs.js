@@ -11,11 +11,12 @@ const { default: axios } = require("axios")
 // GET/pubs  shows a list of pubs based on user queries 
 router.get("/index", (req, res)=>{
     // axios call and save response.data
-    axios.get("https://api.openbrewerydb.org/breweries?by_city=denver&per_page=3")
+    // console.log(req.query, "city test")
+    axios.get(`https://api.openbrewerydb.org/breweries?by_city=${req.query.city}&per_page=3`)
         .then (response =>{
-            res.render('index.ejs', {pubs:response.data})
+            console.log("testing string", response.data)
+            res.render('pubs/index.ejs', {pubs:response.data})
         })
-        .catch(console.log) 
 })
 //  GET /pubs/:id lists information about a specific pub *route works
 router.get ("/:id", (req, res)=>{
