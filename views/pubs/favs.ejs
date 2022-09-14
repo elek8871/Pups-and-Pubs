@@ -1,0 +1,9 @@
+<!-- lists information about a specific pub from user favorites-->
+<h2> Your List</h2>
+
+<!-- list of fav pubs by ID -->
+<% allFaves.forEach(fav =>{ %>
+    <h2> <%= fav.title %></h2>
+    <a href ="/details/<%= fav.odbd_id %> "> Details</a>
+    <%})%>
+<!-- each pub will need a bottun to update and to edit comments -->

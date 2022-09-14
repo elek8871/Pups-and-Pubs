@@ -8,6 +8,7 @@ const bcrypt= require("bcrypt")
 router.get("/index", (req, res)=>{
     res.send('List of pubs')
     // res.render("users/new.ejs")
+    // axios call and save response.data
   
 })
 //  GET /pubs/:id lists information about a specific pub *route works

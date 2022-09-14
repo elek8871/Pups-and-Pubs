@@ -5,6 +5,7 @@ const ejsLayouts = require("express-ejs-layouts")
 const cookieParser = require("cookie-parser")
 const db = require("./models")
 const crypto = require("crypto-js")
+const axios = require('axios')
 
 // config express/app middlewares
 const app = express()
