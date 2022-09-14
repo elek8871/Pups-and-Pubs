@@ -1,9 +1,4 @@
-<h2> Welcome to your profile <%= user.email %> 🐸</h2>
-
-<!-- link to favorite pubs -->
-<h2> Your pubs</h2>
-<a href = "/pubs/show"> Fav Pub Name</a>
-<!-- search for pubs -->
+<!-- form for user to search for pubs near them -->
 <h1> Search for a pup friendly pub near you</h1>
 
 <form method="GET" action="/pubs/index.ejs">
@@ -11,3 +6,4 @@
     <input type = "text" placeholder = "Enter your city here" name="userInput"/>
     <button type = "submit">Submit</button>
 </form>
+

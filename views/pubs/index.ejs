@@ -2,13 +2,15 @@
 
 <h1> Pubs Near You</h1>
 
-pubs.forEach(pub =>{
-    <div>
- <h2> pub.name <h2>
-
-        <li>
-        
-        </li>
-    })
-})
 <div>
+    <ul>
+       <% pubs.forEach(pub=>{ %>
+            <li> <%= pub.name %></li>
+            <li> <%= pub.street %> </li>
+            <li> <%= pub.city %></li>
+            <li> <%= pub.website_url %></li>
+           
+       <% })%>
+    
+    </ul>
+</div>

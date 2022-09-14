@@ -14,7 +14,13 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      address: {
+      street: {
+        type: Sequelize.STRING
+      },
+      city: {
+        type: Sequelize.STRING
+      },
+      website_url: {
         type: Sequelize.STRING
       },
       createdAt: {
