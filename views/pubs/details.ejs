@@ -1,7 +1,30 @@
 <!-- displays details on each pub --> 
-<li> <%= pub.name %></li>
-<li> <%= pub.street %> </li>
-<li> <%= pub.city %></li>
-<li> <%= pub.website_url %></li>
+<li> <%= pub.name %> <br>
+     <%= pub.brewery_type %> <br
+     <%= pub.street %> <br>
+     <%= pub.city %><br>
+     <%= pub.website_url %><br>
+     <%= pub.phone %> </li>
+     
+<!--  add brewery to user favorites -->
+<form method="POST" action="/favs">
+    <input hidden value="<%= pub.name%>" name="name"/>
+    <input hidden value="<%= pub.id %>" name="pubId"/>
+    <button type="submit"> Add to your favorites</button>
+</form>
 
-<!-- user comments -->
+<!-- view user comments -->
+// <div>
+//     <ul>
+//        <%// comments.forEach(comment=>{ %>
+//             <li> <%= //pub.name %> <br>
+//              <%= //user.comment%> <br>
+//          </li>
+           
+//        <%// })%>
+    
+//     </ul>
+// </div>
+
+
+<!-- add user comments -->

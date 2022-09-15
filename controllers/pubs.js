@@ -8,19 +8,22 @@ const { default: axios } = require("axios")
 
 //************  ROUTES TO SEARCH FOR PUBS AND DISPLAY A LIST OF PUBS  ******************
 
-// GET/pubs  shows a list of pubs based on user queries 
+// WORKS
+//  GET/pubs  shows a list of pubs based on user queries 
 router.get("/index", (req, res)=>{
     // axios call and save response.data
     // console.log(req.query, "city test")
     axios.get(`https://api.openbrewerydb.org/breweries?by_city=${req.query.city}&per_page=3`)
         .then (response =>{
-            console.log("testing string", response.data)
+            // console.log("testing string", response.data)
             res.render('pubs/index.ejs', {pubs:response.data})
         })
 })
-//  GET /pubs/:id lists information about a specific pub *route works
-router.get ("/:id", (req, res)=>{
-    res.send("List details ")
+//  GET /pubs/:id lists information about a specific pub 
+router.get("/:id", (req, res)=>{
+    // res.send("pub details here")
+    console.log(req.params.id , "id route test")
+    
 })
 
 //********* ROUTES TO ADD AND EDIT USER FAVORITES **************************

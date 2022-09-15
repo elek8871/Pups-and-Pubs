@@ -5,11 +5,13 @@
 <div>
     <ul>
        <% pubs.forEach(pub=>{ %>
-            <li> <%= pub.name %></li>
-            <li> <%= pub.street %> </li>
-            <li> <%= pub.city %></li>
-            <li> <%= pub.website_url %></li>
-           
+            <li> <%= pub.name %> </a> <br>
+                 <%= pub.street %> <br>
+                 <%= pub.city %> <br>
+            <a href = "/details"> More Information</a>
+            <br>
+        </li>
+       
        <% })%>
     
     </ul>
