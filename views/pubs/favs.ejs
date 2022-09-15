@@ -1,0 +1,20 @@
+<!-- lists information about a specific pub from user favorites-->
+<h2> Your List</h2>
+
+<!-- list of fav pubs by ID -->
+<% user.pubs.forEach(pub =>{ %>
+    <h3> <%= pub.name%></h3>
+    <div>
+      <%= pub.street%> <br>
+      <%= pub.city%> <br>
+      Website: <%= pub.website_url%> <br>
+      Phone: <%= pub.phone %>
+
+      <button
+    </div>
+
+   <% })%> 
+
+
+<!-- each pub will need a button to update and to edit comments -->
+<!-- user.user_notes for each -->

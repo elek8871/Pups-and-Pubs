@@ -115,6 +115,25 @@ router.get("/profile", (req, res)=>{
   
 })
 
+//********* ROUTES TO ADD AND EDIT USER FAVORITES **************************
+
+// GET/ faves READs all favorited pubs and displays to the user
+router.get ("/favs", async (req, res)=>{
+    try{
+        res.render("pubs/favs.ejs",{
+            user:res.locals.user
+        })
+    } catch(error){
+        console.log(error)
+        res.send("server error")
+    }
+})
+
+// DELETE /pubs/:id allows the user to delete the pub from their favorites 
+router.delete("/:id", (req,res)=>{
+    res.send ("remove from your favorites")
+})
+
 
 
 

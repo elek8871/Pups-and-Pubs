@@ -38,7 +38,7 @@
 ### Stretch
 ##### -Incorporate a second API - adding dog jokes
 ##### - Add a url scrub feature allowing the user to search directly for pup friendly pubs
-##### - 
+##### - Add a map
 
 ### Project Notes:
 ###### Day one: most of day one consisted of adding a readme with wireframes, ERDs, and RESTful routing tables. I was able to stub out my routes and add some beginning code.

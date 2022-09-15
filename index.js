@@ -24,7 +24,9 @@ app.use(async (req, res, next) =>{
         const decyrptedId = crypto.AES.decrypt(req.cookies.userId.toString(), process.env.ENC_SECRET)
         const decyrptedIdString= decyrptedId.toString(crypto.enc.Utf8)
         // look up userin db
-        const user = await db.user.findByPk(decyrptedIdString)
+        const user = await db.user.findByPk(decyrptedIdString,{
+            include:[db.pub, db.user_notes]
+        })
         // mount user on res.local
         res.locals.user = user
     }else{

@@ -32,17 +32,36 @@ router.get("/details/:id", (req, res)=>{
 })
 // ---------------WORKS -------------------------
 // GET /pubs  displays a for to create a new pub
-router.get ("/new" ,(req, res)=>{   
-    res.render ("pubs/new.ejs")
-})
+// router.get ("/new" ,(req, res)=>{   
+//     res.render ("pubs/new.ejs")
+// })
 
 // POST/ pubs add new pubs to user favorites and redirects to user profile
-router.post ("/", (req, res)=>{
-    // find or create
-    // associate pub  with user favorites
-    // pub.addUser(res.locals.user)
-
+router.post ("/", async (req, res)=>{
+    try{
+        console.log("fav",req.body)
+        // find or create
+        const [pub] = await db.pub.findOrCreate({
+            where:{
+                name: req.body.name,
+                street: req.body.street,
+                city: req.body.city,
+                phone: req.body.phone,
+                website_url: req.body.url
+            }
+        })
+        // associate pub  with user favorites
+        // pub.addUser(req.locals.user)
+        await res.locals.user.addPub(pub)
+        // console.log("fav 2 test")
+        res.redirect("/users/favs")
+    } catch(error) {
+        console.log(error)
+        res.send("server error")
+    }
 })
+
+
 // router.post  ("/", async (req,res) =>{
 //     try{
 //         const newPub= await db.pub.create({
