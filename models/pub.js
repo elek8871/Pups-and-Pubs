@@ -11,14 +11,21 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      models.pub.belongsToMany(models.user,{
+        through: "user_pubs"
+      })
+      models.pub.hasMany(models.user_notes)
     }
   }
   pub.init({
     obdbId: DataTypes.STRING,
     name: DataTypes.STRING,
-    address: DataTypes.STRING,
-    phone: DataTypes.STRING
-  }, {
+    street: DataTypes.STRING,
+    city:DataTypes.STRING,
+    phone: DataTypes.STRING,
+    website_url: DataTypes.STRING,
+  }, 
+  {
     sequelize,
     modelName: 'pub',
   });

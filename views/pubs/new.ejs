@@ -1,1 +1,28 @@
 <!-- displays a form that allows the user to add a new pub to their favorites -->
+<h2> Add your pub here</h2>
+
+<form method="POST" action="/pubs">
+    <div>
+        <label for="pubName">Name:</label>
+        <input id="pubName" type="text" name="name">
+    </div>
+    <div>
+        <label for="pubStreet"> Street address:</label>
+        <input id="pubStreet" type="text" name="street">
+    </div>
+    <div>
+        <label for="pubCity"> City:</label>
+        <input id="pubCity" type="text" name="city">
+    </div>
+    <div>
+        <label for="pubPhone">Phone:</label>
+        <input id="pubName" type="text" name="phone">
+</div>
+    <div>
+        <label for="pubUrl">Website:</label>
+        <input id="pubUrl" type="text" name="pubUrl">
+</div>
+
+    <button type="submit">Add Pub</button>
+
+</form>

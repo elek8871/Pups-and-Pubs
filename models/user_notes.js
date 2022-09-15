@@ -11,6 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      models.user_notes.belongsTo(models.user)
+      models.user_notes.belongsTo(models.pub)
     }
   }
   user_notes.init({

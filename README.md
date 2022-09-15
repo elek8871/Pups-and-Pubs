@@ -1,5 +1,7 @@
 ## Pups and Pubs
 #### Do you love socializing with your friends with an ice cold beer? Do you want to take your best friend with you? Pups and Pubs is an application for finding pup friendly venues near you.
+#### Users can search for a local pub, add the pub to their favorite list, leave comments on the pub , rate it's pup-friendliness, and add pubs to the list.
+
 
 ### Wireframes
 ![20220913_091058 Small](https://user-images.githubusercontent.com/110848452/189954980-796fb0e6-703e-4930-95a1-9c00d8735f6b.jpeg)
@@ -19,12 +21,13 @@
 | GET  | /pubs/:id   | show (Read        | list information about a specific pub    |
 | POST | /pubs       | new (Create)      | shows a form allowing the user to add a new pub to the db |
 | PUT  | /pubs/edit/:id | update(Update) | shows a form allowing the user to update a specific pub |
-| DELETE | /pubs/:id | destroy (Delete)  | deletes the pub from the data base |
+| DELETE | /pubs/:id | destroy (Delete)  | deletes the pub from the user favorites |
 
 ### User Experience
 ##### 1. As a user, I want to go to a home page to search a database full of breweries.
 ##### 2. As a user, I want to see dog-friendly brewery results based on my search query.
 ##### 3. As a user, I want to pick a brewery and see detailed information about the brewery.
+##### 4. As a user, I want to be able to add and edit favorited breweries.
 
 ### MVP
 ##### -Use RESTful routing
@@ -34,3 +37,9 @@
 
 ### Stretch
 ##### -Incorporate a second API - adding dog jokes
+##### - Add a url scrub feature allowing the user to search directly for pup friendly pubs
+##### - 
+
+### Project Notes:
+###### Day one: most of day one consisted of adding a readme with wireframes, ERDs, and RESTful routing tables. I was able to stub out my routes and add some beginning code.
+###### Day two: was able to access the API for a list of breweries and to enable the user to see detailed information on a selected brewery. I'm pretty happy with my progress so far and feel like I am on a solid pace.
