@@ -36,6 +36,8 @@ router.get("/details/:id", (req, res)=>{
 //     res.render ("pubs/new.ejs")
 // })
 
+
+//  ---------------------WORKS--------------------------------------------
 // POST/ pubs add new pubs to user favorites and redirects to user profile
 router.post ("/", async (req, res)=>{
     try{
@@ -60,24 +62,5 @@ router.post ("/", async (req, res)=>{
         res.send("server error")
     }
 })
-
-
-// router.post  ("/", async (req,res) =>{
-//     try{
-//         const newPub= await db.pub.create({
-//             name: req.body.name,
-//             street: req.body.street,
-//             city: req.body.city,
-//             phone: req.body.phone,
-//             website: req.body.website
-//         })
-//         res.redirect("/users/profile")
-//     } catch(error){
-//     console.log(error)
-//     res.send("server error")
-//     }
-// })
-
-
 
 module.exports = router
