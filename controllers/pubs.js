@@ -18,12 +18,16 @@ router.get("/index", (req, res)=>{
             // console.log("testing string", response.data)
             res.render('pubs/index.ejs', {pubs:response.data})
         })
+        .catch(console.log)
 })
 //  GET /pubs/:id lists information about a specific pub 
-router.get("/:id", (req, res)=>{
-    // res.send("pub details here")
-    console.log(req.params.id , "id route test")
-    
+router.get("/details/:id", (req, res)=>{
+    // console.log(req.params.id , "id route test")
+    axios.get(`https://api.openbrewerydb.org/breweries/${req.params.id}`)
+        .then (response =>{
+            res.render("pubs/details.ejs",{pubs:response.data} )
+        })
+        .catch(console.log)
 })
 
 //********* ROUTES TO ADD AND EDIT USER FAVORITES **************************

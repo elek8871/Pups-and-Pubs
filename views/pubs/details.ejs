@@ -1,15 +1,15 @@
 <!-- displays details on each pub --> 
-<li> <%= pub.name %> <br>
-     <%= pub.brewery_type %> <br
-     <%= pub.street %> <br>
-     <%= pub.city %><br>
-     <%= pub.website_url %><br>
-     <%= pub.phone %> </li>
-     
+<li> <%= pubs.name %> <br>
+     <%= pubs.brewery_type %> <br
+     <%= pubs.street %> <br>
+     <%= pubs.city %><br>
+     <%= pubs.website_url %><br>
+     <%= pubs.phone %> </li> 
+      
 <!--  add brewery to user favorites -->
 <form method="POST" action="/favs">
-    <input hidden value="<%= pub.name%>" name="name"/>
-    <input hidden value="<%= pub.id %>" name="pubId"/>
+    <input hidden value="<%= pubs.name%>" name="name"/>
+    <input hidden value="<%= pubs.id %>" name="pubId"/>
     <button type="submit"> Add to your favorites</button>
 </form>
 
