@@ -8,14 +8,19 @@
       <%= pub.street%> <br>
       <%= pub.city%> <br>
       Website: <%= pub.website_url%> <br>
-      Phone: <%= pub.phone %>
+      Phone: <%= pub.phone %> <br>
+      <a href ="/user_notes/comments"> <button> Add Comments </button> </a>
+       <a href ="/user_notes/comments"> <button> Edit Comments </button> </a> 
+
+      <form method="POST" action="/pubs/<%= pub.id %>/?_method=DELETE">
+        <input type="submit" value="Delete">
+      </form>
+
     </div>
    <% })%> 
 
-   <!-- Add button and form to delete -->
-   <!-- <form method="POST" action="/prehistoric_creatures/<%= //idx %>/?_method=DELETE">
-    <input type="submit" value="Delete">
-</form> -->
+
+
+
 
 <!-- user.user_notes for each -->
-<!-- each pub will need a button to update and to edit comments -->

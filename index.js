@@ -6,6 +6,7 @@ const cookieParser = require("cookie-parser")
 const db = require("./models")
 const crypto = require("crypto-js")
 const axios = require('axios')
+const methodOverride = require('method-override')
 
 // config express/app middlewares
 const app = express()
@@ -46,5 +47,6 @@ app.get ("/", (req, res)=>{
 // controllers
 app.use("/users", require ("./controllers/users"))
 app.use("/pubs", require ("./controllers/pubs"))
+app.use("/user_notes", require ("./controllers/user_notes"))
 // listen on a port
 app.listen(PORT, ()=> console.log (`hamsters are running on port: ${PORT} 🐹`))
