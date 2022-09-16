@@ -12,6 +12,7 @@ router.get("/comments", (req,res)=>{
     res.render("user_notes/comments.ejs")
 })
 
+// ----------------------WORKS-------------------------------
 // POST /comments -> creates a new comment
 router.post ("/", async (req, res) =>{
     try{
@@ -34,9 +35,9 @@ router.post ("/", async (req, res) =>{
     }
   })
 
-// PUT /pubs/edit/:id shows a form that allows a user to comment on their fav pubs
-router.put ("/edit:id", (req,res)=>{
-  
+// display a from to edit comments
+router.get ("/edit", (req,res)=>{
+  res.render("user_notes/edit")
 })
 
 // DELETE COMMENTS

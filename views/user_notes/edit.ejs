@@ -1,3 +1,25 @@
-
+<h2> Update your comments</h2>
 <!-- show a form to delete pub from favorites-->
 
+<form method="POST" action="/user_notes">
+    <div>  
+         <label for="pupFriendly"> How pup friendly is this pub?:</label>
+         <input type="text" name="pupFriendly">
+    </div> 
+    <div>   
+         <label for="beers"> Were the beers tasty?:</label>
+         <input type="text" name="beers">
+    </div> 
+    <div>   
+         <label for="food">How was the food?:</label>
+         <input type="text" name="food">
+    </div>  
+    <div>  
+         <label for="comments">Other comments here:</label>
+         <input type="text" name="comments">
+    </div> 
+    <div>
+     <!-- <input hidden value="<%= //pubs.id %>" name="pubId"/> --> 
+    </div> 
+<input type="submit">
+</form>  
