@@ -4,6 +4,7 @@ const db= require("../models")
 const crypto = require("crypto-js")
 const bcrypt= require("bcrypt")
 const { default: axios } = require("axios")
+const { query } = require("express")
 
 
 // ********** ROUTES  TO ADD AND EDIT COMMENTS*****************************
@@ -36,23 +37,35 @@ router.post ("/", async (req, res) =>{
   })
 
 // ------- WORKS--------------
-// display a from to edit comments
-router.get ("/edit", (req,res)=>{
-  res.render("user_notes/edit")
+// display a form to edit comments
+router.get ("/edit/:id", async (req,res)=>{
+  const pub = await db.pub.findOne({
+    where:{
+      id: req.params.id
+    }
+  })
+  res.render("user_notes/edit", {
+    pub: pub
+  })
 })
 
 // PUT  new data into the the comments
-router.put ("/comments", (req, res)=>{
+router.put ("/comments/:id", (req, res)=>{
   db.user_notes.update({
-
+    // reassigns 
+    userId: res.locals.user.id,
+    pupFriendly: req.body.pupFriendly,
+    beers:req.body.beers,
+    food:req.body.food,
+    comments: req.body.comments,
+  },
+  {
+  where : {
+    // id to find data in db
+    id:req.params.id
+  }
   })
-  // reassign values
-  comments[req.params.id].pupFriendly = req.body.pupFriendly
-  comments[req.params.id].beers = req.body.beers
-  comments[req.params.id].food = req.body.food
-  comments[req.params.id].comments = req.body.comments
-  // save the edited comments to the db
-
+  res.redirect("/users/favs")
 })
 
 

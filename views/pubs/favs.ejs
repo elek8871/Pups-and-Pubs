@@ -53,7 +53,7 @@
     </div>
         </form>   
 
-       <a href ="/user_notes/edit"> <button> Edit Comments </button> </a> 
+       <a href ="/user_notes/edit/<%= pub.id %>"> <button> Edit Comments </button> </a> 
 
       <form method="POST" action="/pubs/<%= pub.id %>/?_method=DELETE">
         <input type="submit" value="Delete From Favorites">
