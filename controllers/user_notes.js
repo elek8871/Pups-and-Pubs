@@ -13,18 +13,21 @@ router.get("/comments", (req,res)=>{
 })
 
 // POST /comments -> creates a new comment
-router.post ("/comments/", async (req, res) =>{
+router.post ("/", async (req, res) =>{
     try{
+      // creates a new comment
       const newComment = await db.user_notes.create
       ({
         pupFriendly: req.body.pupFriendly,
         beers: req.body.beers,
         food: req.body.food,
-        comments: req.body.comments
-        // need user and pub id to link to db
+        comments: req.body.comments,
+        userId: res.locals.user.dataValues.id,
+        pubId: req.body.pubId
+
       })
-      // console.log("%^%^%^%^%^%^%^%^%^",newComment)
-      res.redirect("/users/favs")
+      console.log(req.body)
+         res.redirect("/users/favs")
     }catch(error){
       console.log(error)
       res.send("server error")
@@ -36,7 +39,6 @@ router.put ("/edit:id", (req,res)=>{
   
 })
 
-// EDIT COMMENTS
 // DELETE COMMENTS
 
 module.exports = router

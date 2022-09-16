@@ -1,7 +1,7 @@
 <!-- show a form to add or edit comments on their favorited pubs-->
 <h2> Add pub rating here </h2>
 
-<form method="POST" action="">
+<form method="POST" action="/user_notes">
      <div>  
           <label for="pupFriendly"> How pup friendly is this pub?:</label>
           <input type="text" name="pupFriendly">
@@ -17,7 +17,10 @@
      <div>  
           <label for="comments">Other comments here:</label>
           <input type="text" name="comments">
-     </div>  
+     </div> 
+     <div>
+      <input hidden value="<%= pub.id %>" name="pubId"/> -->
+     </div> 
 <input type="submit">
 </form>  
 

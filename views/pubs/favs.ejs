@@ -5,12 +5,61 @@
 <% user.pubs.forEach(pub =>{ %>
     <h3> <%= pub.name%></h3>
     <div>
-      <%= pub.street%> <br>
-      <%= pub.city%> <br>
-      Website: <%= pub.website_url%> <br>
-      Phone: <%= pub.phone %> <br>
-      <a href ="/user_notes/comments"> <button> Add Comments </button> </a>
-       <a href ="/user_notes/comments"> <button> Edit Comments </button> </a> 
+      <%= pub.street%> 
+    </div>
+    <div>
+      <%= pub.city%> 
+    </div>
+    <div>
+      Website: <%= pub.website_url%> 
+    </div>
+    <div>
+      Phone: <%= pub.phone %> 
+    </div>
+  <%  pub.user_notes.forEach(user_note=>{ %>
+      <div>  
+        <p> Pup Friendly <%= user_note.pupFriendly %> </p> 
+      </div>
+      <div> 
+        <p> Beer Rating <%= user_note.beers %> </p>
+      </div>
+      <div> 
+        <p> Food Rating <%= user_note.food %> </p>
+      </div>
+      <div>
+         <p> Other Comments <%= user_note.comments %></p>
+       </div>
+   <% }) %>
+        <div>
+        <h2> Add Ratings: </h2>
+        <form method="POST" action="/user_notes">
+             <div>  
+                  <label for="pupFriendly"> How pup friendly is this pub?:</label>
+                  <input type="number" max="5" name="pupFriendly">
+             </div> 
+             <div> 
+                  <label for="beers"> Were the beers tasty?:</label>
+                <input type="number" max="5" name="beers" >         
+              </div> 
+             <div>   
+                  <label for="food">How was the food?:</label>
+                  <input type="number" max="5" name="food">
+             </div>  
+             <div>  
+                  <label for="comments">Other comments here:</label>
+                  <input type="text" name="comments">
+             </div> 
+             <div>
+              <input hidden value="<%= pub.id %>" name="pubId"/> 
+             </div> 
+        <input type="submit" value="Add your comments">
+        </form>   
+
+
+
+      </div>
+      <!-- <a href ="/user_notes/comments"> <button> Add Comments </button> </a>
+       <a href ="/user_notes/comments"> <button> Edit Comments </button> </a>  -->
 
       <form method="POST" action="/pubs/<%= pub.id %>/?_method=DELETE">
         <input type="submit" value="Delete">

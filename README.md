@@ -27,7 +27,7 @@
 ##### 1. As a user, I want to go to a home page to search a database full of breweries.
 ##### 2. As a user, I want to see dog-friendly brewery results based on my search query.
 ##### 3. As a user, I want to pick a brewery and see detailed information about the brewery.
-##### 4. As a user, I want to be able to add and edit favorited breweries.
+##### 4. As a user, I want to be able to add and edit comments on my faveorited breweries.
 
 ### MVP
 ##### -Use RESTful routing
@@ -43,3 +43,4 @@
 ### Project Notes:
 ###### Day one: most of day one consisted of adding a readme with wireframes, ERDs, and RESTful routing tables. I was able to stub out my routes and add some beginning code.
 ###### Day two: was able to access the API for a list of breweries and to enable the user to see detailed information on a selected brewery. I'm pretty happy with my progress so far and feel like I am on a solid pace.
+###### Day three: Hit a few road blocks today. I spent the morning working on a route that wasn't in MVP so had to pivot back to MVP. I was able to add comments to the user_notes db however, they don't have the associated FK. Tomorrow I will work on getting the comments fully functional and adding the ability to edit and delete.

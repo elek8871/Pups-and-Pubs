@@ -120,6 +120,7 @@ router.get("/profile", (req, res)=>{
 // GET/ faves READs all favorited pubs and displays to the user
 router.get ("/favs", async (req, res)=>{
     try{
+        console.log(res.locals.user)
         res.render("pubs/favs.ejs",{
             user:res.locals.user
         })

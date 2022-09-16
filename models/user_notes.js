@@ -18,6 +18,9 @@ module.exports = (sequelize, DataTypes) => {
   user_notes.init({
     userId: DataTypes.INTEGER,
     pubId: DataTypes.INTEGER,
+    pupFriendly: DataTypes.INTEGER,
+    beers: DataTypes.INTEGER,
+    food: DataTypes.INTEGER,
     comments: DataTypes.STRING
   }, {
     sequelize,

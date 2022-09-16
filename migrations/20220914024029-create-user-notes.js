@@ -14,6 +14,15 @@ module.exports = {
       pubId: {
         type: Sequelize.INTEGER
       },
+      pupFriendly: {
+        type: Sequelize.INTEGER
+      },
+      beers: {
+        type: Sequelize.INTEGER
+      },
+      food: {
+        type: Sequelize.INTEGER
+      },
       comments: {
         type: Sequelize.STRING
       },
