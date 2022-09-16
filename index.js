@@ -15,6 +15,7 @@ app.set("view engine", "ejs")
 app.use(ejsLayouts)
 app.use(express.urlencoded ({extended: false}))
 app.use(cookieParser())
+app.use(methodOverride("_method"))
 
 // custom middleware for cookies
 app.use(async (req, res, next) =>{
@@ -37,6 +38,10 @@ app.use(async (req, res, next) =>{
     // move on to next route or middleware
     next()
 })
+// controllers
+app.use("/users", require ("./controllers/users"))
+app.use("/pubs", require ("./controllers/pubs"))
+app.use("/user_notes", require ("./controllers/user_notes"))
 
 // routes
 app.get ("/", (req, res)=>{
@@ -44,9 +49,6 @@ app.get ("/", (req, res)=>{
     console.log("the currently logged in user is:, res.locals.user")
 })
 
-// controllers
-app.use("/users", require ("./controllers/users"))
-app.use("/pubs", require ("./controllers/pubs"))
-app.use("/user_notes", require ("./controllers/user_notes"))
+
 // listen on a port
 app.listen(PORT, ()=> console.log (`hamsters are running on port: ${PORT} 🐹`))

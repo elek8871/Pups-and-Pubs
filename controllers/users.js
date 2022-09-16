@@ -120,7 +120,7 @@ router.get("/profile", (req, res)=>{
 // GET/ faves READs all favorited pubs and displays to the user
 router.get ("/favs", async (req, res)=>{
     try{
-        console.log(res.locals.user)
+        // console.log(res.locals.user)
         res.render("pubs/favs.ejs",{
             user:res.locals.user
         })
@@ -131,9 +131,9 @@ router.get ("/favs", async (req, res)=>{
 })
 
 // DELETE /pubs/:id allows the user to delete the pub from their favorites 
-router.delete("/:id", (req,res)=>{
-    res.send ("remove from your favorites")
-})
+// router.delete("/:id", (req,res)=>{
+//     res.send ("remove from your favorites")
+// })
 
 
 

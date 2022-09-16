@@ -63,4 +63,14 @@ router.post ("/", async (req, res)=>{
     }
 })
 
+// DELETE FROM FAVORITES
+router.delete('/:pubId', (req,res)=>{
+    db.pub.destroy({
+      where: {id: req.params.pubId}
+    })
+    .then( ()=>{
+      res.redirect("/users/favs")
+    })
+  })
+
 module.exports = router

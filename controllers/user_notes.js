@@ -27,7 +27,7 @@ router.post ("/", async (req, res) =>{
         pubId: req.body.pubId
 
       })
-      console.log(req.body)
+      // console.log(req.body)
          res.redirect("/users/favs")
     }catch(error){
       console.log(error)
@@ -35,11 +35,26 @@ router.post ("/", async (req, res) =>{
     }
   })
 
+// ------- WORKS--------------
 // display a from to edit comments
 router.get ("/edit", (req,res)=>{
   res.render("user_notes/edit")
 })
 
-// DELETE COMMENTS
+// PUT  new data into the the comments
+router.put ("/comments", (req, res)=>{
+  db.user_notes.update({
+
+  })
+  // reassign values
+  comments[req.params.id].pupFriendly = req.body.pupFriendly
+  comments[req.params.id].beers = req.body.beers
+  comments[req.params.id].food = req.body.food
+  comments[req.params.id].comments = req.body.comments
+  // save the edited comments to the db
+
+})
+
+
 
 module.exports = router
