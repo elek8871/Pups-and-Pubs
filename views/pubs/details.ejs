@@ -1,17 +1,21 @@
 <!-- displays details on each pub --> 
-<li> <%= pubs.name %> <br>
-     Brewery Type: <%= pubs.brewery_type %> <br
-     <%= pubs.street %> <br>
-     <%= pubs.city %><br>
-     Website: <%= pubs.website_url %><br>
-     Phone: <%= pubs.phone %> </li> 
+<div class ="container-fluid">
+    <h2><%= pubs.name %> </h2> 
+    <div> Brewery Type: <%= pubs.brewery_type %> </div>
+    <div><%= pubs.street %> </div>
+    <div> <%= pubs.city %></div>
+    <div> <%= pubs.state %> </div>
+    <div> Website:<a href = "<%= pubs.website_url%>"></a> </div> 
+    <div>Phone: <%= pubs.phone %> </div>
+</div>
       
 <!--  add brewery to user favorites -->
 <form method="POST" action="/pubs">
     <input hidden value="<%= pubs.name%>" name="name"/>
-    <input hidden value="<%= pubs.brewery_type %>" name="brewery_type"/>
+    <input hidden value="<%= pubs.brewery_type %>" name="brewery_type"/> 
     <input hidden value="<%= pubs.street %>" name="street"/>
     <input hidden value="<%= pubs.city %>" name="city"/>
+    <input hidden value="<%= pubs.state %>" name="state"/>
      <input hidden value="<%= pubs.website_url%>" name="url"/> 
     <input hidden value="<%= pubs.phone %>" name="phone"/>
     <input hidden value="<%= pubs.id %>" name="pubId"/>

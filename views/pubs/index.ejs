@@ -1,13 +1,14 @@
 <!-- show a list of pubs that match the user querie -->
-
-<h1> Pubs Near You</h1>
+<div class ="container-fluid">
+<h1 class="display-5" >Pubs Near You :</h1>
 
 <div>
     <ul>
        <% pubs.forEach(pub=>{ %>
-            <li> <%= pub.name %> </a> <br>
-                 <%= pub.street %> <br>
-                 <%= pub.city %> <br>
+            <li> <div class="fw-semibold"><%= pub.name %> </div> 
+                <div class="fw-light"> <%= pub.street %> </div>
+                <div class="fw-light"> <%= pub.city %> </div>
+                <div class="fw-light"> <%= pub.state %> </div>
             <a href = "/pubs/details/<%= pub.id %>"> More Information</a>
             <br>
         </li>
@@ -15,4 +16,5 @@
        <% })%>
     
     </ul>
+</div>
 </div>

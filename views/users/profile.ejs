@@ -1,19 +1,22 @@
-<h2> Welcome to your Pups & Pubs  <%= user.email %> 🐾 </h2>
+<div class="container">
+<h1 class="lead text-success text-center display-4">  🐾 Welcome to Pups & Pubs  <%= user.email %> 🐾 </h1>
 
 <!-- link to favorite pubs -->
-<h2> 
+<p class="text-secondary text-center"> 
 <a href = "/users/favs"> Your Favorites</a> 
-</h2>
-<div>
-<!-- <a href = "/pubs/new" > Add a New Pub</a> -->
+</p>
+<!-- add a form for to add a new pub here -->
 </div>
 
 
 <!-- search for pubs -->
-<h1> Search for a pup friendly pub near you</h1>
-
+<div class="container">
+<p class="text-secondary"> Search for a pup friendly pub near you</p>
+<div class="mb-3">
 <form method="GET" action="/pubs/index">
-    <label for = "search-input"> Search: </label>
-    <input type = "text" placeholder = "Enter your city here" name="city"/>
-    <button type = "submit">Submit</button>
+    <label for = "search-input" class="form-label text-secondary"> Search: </label>
+    <input type = "text" class="form-control" id="formInput"  placeholder = "Enter your city here" name="city"/>
+    <button type = "submit" class="btn btn-primary">Submit</button>
 </form>
+</div>
+

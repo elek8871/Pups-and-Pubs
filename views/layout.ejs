@@ -8,33 +8,41 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </head>
+<div class="container">
 <body>
-    <nav>
-        <ul>
+
+    <nav class="navbar navbar-expand-lg bg-light" >
+    <div class="container">
+     
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
             <!-- if user is logged in -->
             <% if (user){ %>
-                <li>
+                <li  class="nav-link active" aria-current="page"class="nav-item" >
                     <a href = "/users/profile"> Profile</a>
                 </li>
 
-                <li>
-                    <a href = "/users/logout"> Log Out</a>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href = "/users/logout"> Log Out</a>
                 </li>
 
                 <% } else { %>
                 <!-- // ifuser logged out -->
-                <li>
-                    <a href = "/users/new"> Sign Up</a>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page"href = "/users/new"> Sign Up</a>
                 </li>
 
-                 <li>
-                <a href = "/users/login"> Log In</a>
+                 <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href = "/users/login"> Log In</a>
             </li>
             <% } %>
            
         </ul>
-    </nav>
+   <!-- </nav>  -->
+</div>
+</nav>
 
     <%- body %>
 </body>
+</div>
 </html>

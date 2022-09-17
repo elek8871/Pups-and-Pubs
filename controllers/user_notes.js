@@ -54,6 +54,7 @@ router.put ("/comments/:id", (req, res)=>{
   db.user_notes.update({
     // reassigns 
     userId: res.locals.user.id,
+    pubId: req.params.id,
     pupFriendly: req.body.pupFriendly,
     beers:req.body.beers,
     food:req.body.food,
