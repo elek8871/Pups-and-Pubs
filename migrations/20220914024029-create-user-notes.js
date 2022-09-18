@@ -14,6 +14,9 @@ module.exports = {
       pubId: {
         type: Sequelize.INTEGER
       },
+      visitDate: {
+        type: Sequelize.DATE
+      },
       pupFriendly: {
         type: Sequelize.INTEGER
       },

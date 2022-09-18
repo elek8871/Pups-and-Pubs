@@ -55,6 +55,7 @@ router.put ("/comments/:id", (req, res)=>{
     // reassigns 
     userId: res.locals.user.id,
     pubId: req.params.id,
+    visitDate: req.body.visitDate,
     pupFriendly: req.body.pupFriendly,
     beers:req.body.beers,
     food:req.body.food,

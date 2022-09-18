@@ -14,6 +14,9 @@
     <h4> Rating:</h4>
   <%  pub.user_notes.forEach(user_note=>{ %>
       <div>  
+        <p> Visit Date: <%= user_note.visitDate %></p>
+      </div> 
+      <div>  
         <p> Pup Friendly: <%= user_note.pupFriendly %> </p> 
       </div>
       <div> 
@@ -31,6 +34,11 @@
 
 <h4> On a scale of 1 to 5 paws: </h4>
   <form method="POST" action="/user_notes">
+    <div>  
+      <div>  
+        <label for="visitDate"> Visit Date:</label>
+        <input type="date" name="visitDate">
+   </div> 
     <div>  
       <label for="pupFriendly"> How pup friendly is this pub?:</label>
       <input type="number" max="5" min="0"name="pupFriendly">
