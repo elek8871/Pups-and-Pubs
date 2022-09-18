@@ -11,7 +11,7 @@
 <div class="container">
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-light" >
+    <nav class="navbar navbar-expand-lg bg-success m-3 p-2 rounded border border-3" >
     <div class="container">
      
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -19,21 +19,21 @@
             <!-- if user is logged in -->
             <% if (user){ %>
                 <li  class="nav-link active" aria-current="page"class="nav-item" >
-                    <a href = "/users/profile"> Profile</a>
+                    <a href = "/users/profile" class="text-white"> Profile</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href = "/users/logout"> Log Out</a>
+                    <a class="nav-link active text-white" aria-current="page" href = "/users/logout"> Log Out</a>
                 </li>
 
                 <% } else { %>
                 <!-- // ifuser logged out -->
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page"href = "/users/new"> Sign Up</a>
+                    <a class="nav-link active text-white" aria-current="page"href = "/users/new"> Sign Up</a>
                 </li>
 
                  <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href = "/users/login"> Log In</a>
+                <a class="nav-link active text-white" aria-current="page" href = "/users/login"> Log In</a>
             </li>
             <% } %>
            

@@ -1,4 +1,5 @@
 <!-- lists information about a specific pub from user favorites-->
+<div class="container">
 <h2> Your Favorite Pubs</h2>
 
 <!-- list of fav pubs by ID -->
@@ -10,18 +11,19 @@
     <div> Website: <%= pub.website_url%>  </div>
     <div> Phone: <%= pub.phone %>  </div>
     <!-- shows user comments  -->
+    <h4> Rating:</h4>
   <%  pub.user_notes.forEach(user_note=>{ %>
       <div>  
-        <p> Pup Friendly <%= user_note.pupFriendly %> </p> 
+        <p> Pup Friendly: <%= user_note.pupFriendly %> </p> 
       </div>
       <div> 
-        <p> Beer Rating <%= user_note.beers %> </p>
+        <p> Beer Rating: <%= user_note.beers %> </p>
       </div>
       <div> 
-        <p> Food Rating <%= user_note.food %> </p>
+        <p> Food Rating: <%= user_note.food %> </p>
       </div>
       <div>
-         <p> Other Comments <%= user_note.comments %></p>
+         <p> Other Comments: <%= user_note.comments %></p>
        </div>
        <% })%> 
        
@@ -50,17 +52,19 @@
 
     <div>
       <input hidden value= "<%= pub.id %>" name="pubId"/> 
-      <input type="submit" value="Add your comments">
+      <input type="submit" class="btn btn-outline-success btn-sm"  value="Add your comments">
     </div>
-        </form>   
+        
+<!-- THIS NEEDS TO BE A FROM NOT JUST A BUTTON -->
+       <a href ="/user_notes/edit/<%= pub.id %>"> <button class="btn btn-outline-success btn-sm" > Edit Comments </button> </a> 
 
-       <a href ="/user_notes/edit/<%= pub.id %>"> <button> Edit Comments </button> </a> 
-
+    </form>   
       <form method="POST" action="/pubs/<%= pub.id %>/?_method=DELETE">
-        <input type="submit" value="Delete From Favorites">
+        <input type="submit" class="btn btn-outline-danger btn-sm" value="Delete From Favorites">
       </form>
     </div>
     <% }) %>
+</div>
 
   
 

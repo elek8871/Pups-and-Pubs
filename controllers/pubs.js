@@ -13,7 +13,7 @@ const { default: axios } = require("axios")
 router.get("/index", (req, res)=>{
     // axios call and save response.data
     // console.log(req.query, "city test")
-    axios.get(`https://api.openbrewerydb.org/breweries?by_city=${req.query.city}&per_page=3`)
+    axios.get(`https://api.openbrewerydb.org/breweries?by_city=${req.query.city}`)
         .then (response =>{
             // console.log("testing string", response.data)
             res.render('pubs/index.ejs', {pubs:response.data})
