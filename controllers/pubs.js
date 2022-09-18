@@ -62,7 +62,7 @@ router.post ("/", async (req, res)=>{
         res.send("server error")
     }
 })
-
+// -------------------WORKS---------------------------
 // DELETE FROM FAVORITES
 router.delete('/:pubId', (req,res)=>{
     db.pub.destroy({

@@ -44,7 +44,7 @@ router.get ("/edit/:id", async (req,res)=>{
       id: req.params.id
     }
   })
-  res.render("user_notes/edit", {
+  res.render("user_notes/edit.ejs", {
     pub: pub
   })
 })
