@@ -1,18 +1,28 @@
 <!-- lists information about a specific pub from user favorites-->
-<div class="container">
+<div class="container my-5">
 <h2> Your Favorite Pubs</h2>
 
+<div>
 <!-- list of fav pubs by ID -->
-<% user.pubs.forEach(pub =>{ %>
-    <h3> <%= pub.name%></h3>
+  <% user.pubs.forEach(pub =>{ %>
+    <h4> <%= pub.name%> </h4>
     <div> <%= pub.street%> </div>
     <div> <%= pub.city%> </div>
     <div> <%= pub.state %></div>
-    <div> Website: <%= pub.website_url%>  </div>
     <div> Phone: <%= pub.phone %>  </div>
-    <!-- shows user comments  -->
-    <h4> Rating:</h4>
-  <%  pub.user_notes.forEach(user_note=>{ %>
+    <div> Website: <a href= "<%= pub.website_url %>"><%= pub.website_url %></a></div>
+  
+      </form>   
+        <form method="POST" action="/pubs/<%= pub.id %>/?_method=DELETE">
+        <input type="submit" class="btn btn-outline-danger btn-sm" value="Delete From Favorites">
+      </form>
+</div>
+
+
+<div>
+  <!-- shows user comments  -->
+  <h5> Ratings:</h5>
+    <%pub.user_notes.forEach(user_note=>{ %>
       <div>  
         <p> Visit Date: <%= user_note.visitDate %></p>
       </div> 
@@ -30,50 +40,41 @@
          <a href ="/user_notes/edit/<%= pub.id %>"> <button class="btn btn-outline-success btn-sm" > Edit Comments </button> </a> 
        </div>
        <% })%> 
+</div>
        
+<div>
+  <h5> Add a new review:</h5>
+  <h6> On a scale of 1 to 5 paws: </h6>
+    <form method="POST" action="/user_notes">
+  <div>  
+    <label for="visitDate"> Visit Date:</label>
+    <input type="date" name="visitDate"> 
+  </div> 
+  <div>  
+    <label for="pupFriendly"> How pup friendly is this pub?:</label>
+    <input type="number" max="5" min="0"name="pupFriendly">
+  </div> 
+  <div> 
+    <label for="beers"> Were the beers tasty?:</label>
+    <input type="number" max="5" min="0" name="beers" >         
+  </div> 
+  <div>   
+    <label for="food">How was the food?:</label>
+    <input type="number" max="5" min="0" name="food">
+  </div>  
+  <div>  
+    <label for="comments">Other comments here:</label>
+    <input type="text" name="comments">
+  </div> 
+  <div>
+    <input hidden value= "<%= pub.id %>" name="pubId"/> 
+    <input type="submit" class="btn btn-outline-success btn-sm"  value="Add your comments">
+  </div>
 
-<h4> On a scale of 1 to 5 paws: </h4>
-  <form method="POST" action="/user_notes">
-    <div>  
-      <div>  
-        <label for="visitDate"> Visit Date:</label>
-        <input type="date" name="visitDate">
-   </div> 
-    <div>  
-      <label for="pupFriendly"> How pup friendly is this pub?:</label>
-      <input type="number" max="5" min="0"name="pupFriendly">
-    </div> 
+</div>     
 
-    <div> 
-      <label for="beers"> Were the beers tasty?:</label>
-      <input type="number" max="5" min="0" name="beers" >         
-    </div> 
+ <% }) %>
 
-    <div>   
-      <label for="food">How was the food?:</label>
-      <input type="number" max="5" min="0" name="food">
-    </div>  
-
-    <div>  
-     <label for="comments">Other comments here:</label>
-     <input type="text" name="comments">
-    </div> 
-
-    <div>
-      <input hidden value= "<%= pub.id %>" name="pubId"/> 
-      <input type="submit" class="btn btn-outline-success btn-sm"  value="Add your comments">
-    
-    </div>
-        
-
-      
-
-    </form>   
-      <form method="POST" action="/pubs/<%= pub.id %>/?_method=DELETE">
-        <input type="submit" class="btn btn-outline-danger btn-sm" value="Delete From Favorites">
-      </form>
-    </div>
-    <% }) %>
 </div>
 
   

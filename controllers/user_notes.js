@@ -20,6 +20,7 @@ router.post ("/", async (req, res) =>{
       // creates a new comment
       const newComment = await db.user_notes.create
       ({
+        visitDate: req.body.visitDate,
         pupFriendly: req.body.pupFriendly,
         beers: req.body.beers,
         food: req.body.food,
