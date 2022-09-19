@@ -15,7 +15,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       visitDate: {
-        type: Sequelize.DATE
+        type: Sequelize.DATEONLY
       },
       pupFriendly: {
         type: Sequelize.INTEGER
