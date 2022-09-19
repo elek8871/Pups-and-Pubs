@@ -22,31 +22,29 @@
   </div>
 
 
-  <div class="col">
+  <div class="col accordian">
 
-    <div class="accordian"
-    <h5>Ratings:</h5>
-    <%pub.user_notes.forEach(user_note=>{ %>
-      <div>  
-        <p> Visit Date: <%= user_note.visitDate %></p>
-      </div> 
-      <div>  
-        <p> Pup Friendly: <%= user_note.pupFriendly %> </p> 
+      <h5>Ratings:</h5>
+      <%pub.user_notes.forEach(user_note=>{ %>
+        <div>  
+         <p> Visit Date: <%= user_note.visitDate %></p>
+        </div> 
+        <div>  
+          <p> Pup Friendly: <%= user_note.pupFriendly %> </p> 
+        </div>
+        <div> 
+          <p> Beer Rating: <%= user_note.beers %> </p>
+        </div>
+        <div> 
+          <p> Food Rating: <%= user_note.food %> </p>
+        </div>
+        <div>
+          <p> Other Comments: <%= user_note.comments %></p>
+          <a href ="/user_notes/edit/<%= pub.id %>"> <button class="btn btn-outline-success btn-sm" > Edit Comments </button> </a> 
+        </div>
+        <% })%> 
       </div>
-      <div> 
-        <p> Beer Rating: <%= user_note.beers %> </p>
-      </div>
-      <div> 
-        <p> Food Rating: <%= user_note.food %> </p>
-      </div>
-      <div>
-         <p> Other Comments: <%= user_note.comments %></p>
-         <a href ="/user_notes/edit/<%= pub.id %>"> <button class="btn btn-outline-success btn-sm" > Edit Comments </button> </a> 
-       </div>
-       <% })%> 
     </div>
-    </div>
-   </div>
 
 
 
