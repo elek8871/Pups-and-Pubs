@@ -1,7 +1,12 @@
 <!-- show a form to add or edit comments on their favorited pubs-->
+<div class="container">
 <h2> Add pub rating here </h2>
 
 <form method="POST" action="/user_notes">
+     <div>  
+          <label for="name"> Name:</label>
+          <input type="text" name="name">
+     </div> 
      <div>  
           <label for="visitDate"> Visit Date:</label>
           <input type="date" name="visitDate">
@@ -19,14 +24,15 @@
           <input type="text" name="food">
      </div>  
      <div>  
-          <label for="comments">Other comments here:</label>
-          <input type="text" name="comments">
+          <label for="comments">Share your thoughts:</label>
+          <textarea cols="50" rows="5" name="comments"></textarea>
      </div> 
      <div>
       <input hidden value="<%= pub.id %>" name="pubId"/> -->
      </div> 
 <input type="submit">
 </form>  
+</div>
 
 
 <!--ratings one to five paws

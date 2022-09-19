@@ -33,7 +33,7 @@ router.post ("/", async (req, res) =>{
          res.redirect("/users/favs")
     }catch(error){
       console.log(error)
-      res.send("server error")
+      res.send("Oops... you forgot to enter your comments")
     }
   })
 

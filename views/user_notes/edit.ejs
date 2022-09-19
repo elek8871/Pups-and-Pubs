@@ -1,6 +1,11 @@
+<div class="container"
 <h2> Update your comments</h2>
 <h3> On a scale of 1-5 paws</h3>
 <form method="POST" action="/user_notes/comments/<%=pub.id %>/?_method=PUT">
+     <div>  
+          <label for="name"> Name:</label>
+          <input type="text" name="name">
+     </div> 
      <div>  
           <label for="visitDate"> Visit Date:</label>
           <input type="date" name="visitDate">
@@ -19,10 +24,11 @@
     </div>  
     <div>  
          <label for="comments">Other comments here:</label>
-         <input type="text" name="comments">
+         <textarea cols="50" rows="5" name="comments"></textarea>
     </div> 
     <div> 
   <!-- <input hidden value="<%= //pubs.id %>" name="pubId"/>  -->
     </div> 
 <input type="submit">
-</form>  
+</form>
+</div>  
