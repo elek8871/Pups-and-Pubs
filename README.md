@@ -17,11 +17,14 @@
 |------|-------------|------------------|-----------------------------------------|
 | GET  | /user       | index (Read)      | gets user information and logs them in |
 | GET  | /user/new   | new (Create)      | shows a form to register new user       |
+| GET  | /user/profile | index (Read)    | shows users profile with favorites   |
 | GET  | /pubs       | index (Read)      | shows a list of pubs based on user queries|
 | GET  | /pubs/:id   | show (Read        | list information about a specific pub    |
-| POST | /pubs       | new (Create)      | shows a form allowing the user to add a new pub to the db |
-| PUT  | /pubs/edit/:id | update(Update) | shows a form allowing the user to update a specific pub |
+| POST | /pubs       | show (Read)       | Adds pub to user favorites  |
 | DELETE | /pubs/:id | destroy (Delete)  | deletes the pub from the user favorites |
+| GET  | /edit/:id   | new (Create)     | allows user to comment on their favorite pubs|
+| POST | /user_notes | new (Create)    | posts comments to specific user favorite|
+| PUT  | /edit/:id | update(Update) | shows a form allowing the user to update comments on specific pub |
 
 ### User Experience
 ##### 1. As a user, I want to go to a home page to search a database full of breweries.
@@ -47,3 +50,4 @@
 ###### Day Four: Comments fu;;y functional. I decided to use a rating scale so I updated the DB to reflect that. I was able to get the delete route to work! Still struggling with the update route. It adds comments but doesn't update
 ###### Day Five: Took a break from coding the project and did Bootstrap for CSS.
 ###### Day Six: Reached MVP today. I feel users may want to add ratings on different dates so I added a visit date to comments. Somehow in the process of updating all those routes the update comments is now functioning so I'm sure there was a syntax error that I fixed. Today the plan is to finish CSS and if time allows work on stretch goals.
+###### Day Seven:
