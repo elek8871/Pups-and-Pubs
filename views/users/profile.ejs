@@ -1,22 +1,25 @@
-<div class="container">
-<h1 class="lead text-success text-center display-4">  🐾 Welcome to Pups & Pubs  <%= user.email %> 🐾 </h1>
+<div class="profile" id="profile">
 
-<!-- link to favorite pubs -->
-<p class="text-secondary text-center"> 
-<a href = "/users/favs" class="text-secondary"> Your Favorites</a> 
-</p>
+    <div class="container">
+     <h1 class="lead text-success text-center display-4">  🐾 Welcome to Pups & Pubs  <%= user.email %> 🐾 </h1>
+
+        <!-- link to favorite pubs -->
+        <p class="text-secondary text-center display-6"> 
+        <a href = "/users/favs" class="text-secondary"> Your Favorites</a> 
+        </p>
 <!-- add a form for to add a new pub here -->
-</div>
+    </div>
 
 
 <!-- search for pubs -->
-<div class="container">
-<p class="text-secondary"> Search for a pup friendly pub near you</p>
-<div class="mb-3">
-<form method="GET" action="/pubs/index">
-    <label for = "search-input" class="form-label text-secondary"> Search: </label>
-    <input type = "text" class="form-control" id="formInput"  placeholder = "Enter your city here" name="city"/>
-    <button type = "submit" class="btn btn-outline-secondary">Submit</button>
-</form>
-</div>
+    <div class="container">
+        <p class="text-secondary"> Search for a pup friendly pub near you</p>
+        <div class="mb-3">
+            <form method="GET" action="/pubs/index">
+                <label for = "search-input" class="form-label text-secondary"> Search: </label>
+                <input type = "text" class="form-control" id="formInput"  placeholder = "Enter your city here" name="city"/>
+                <button type = "submit" class="btn btn-outline-secondary">Submit</button>
+            </form>
+    </div>
 
+</div>

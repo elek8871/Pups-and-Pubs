@@ -1,5 +1,12 @@
-.homePage {
-    background-image:url("./images/dogsatbar.jpeg") !important ;
+* {
+    background-image:url("./images/butters.jpeg") !important ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#profile {
+    background-image: url("./images/dog-beer-feature-2-618x381.jpeg")!important ;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

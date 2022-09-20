@@ -1,5 +1,5 @@
-<!-- displays details on each pub --> 
 <div class ="container">
+    <!-- displays details on each pub --> 
     <h2 class=" text-success display-6"><u> <%= pubs.name %></u> </h2> 
     <div class="fw-light text-secondary"> Brewery Type: <%= pubs.brewery_type %> </div>
     <div class="fw-light text-secondary"><%= pubs.street %> </div>
@@ -8,34 +8,16 @@
     <div class="fw-light text-secondary"> Website:  <a href= "<%= pubs.website_url %>" target="_blank">
         <%= pubs.website_url %> </a> </div> 
     <div class="fw-light text-secondary">Phone: <%= pubs.phone %> </div>
-
-      
 <!--  add brewery to user favorites -->
-<form method="POST" action="/pubs">
-    <input hidden value="<%= pubs.name%>" name="name"/>
-    <input hidden value="<%= pubs.brewery_type %>" name="brewery_type"/> 
-    <input hidden value="<%= pubs.street %>" name="street"/>
-    <input hidden value="<%= pubs.city %>" name="city"/>
-    <input hidden value="<%= pubs.state %>" name="state"/> 
-     <input hidden value="<%= pubs.website_url%>" name="url"/> 
-    <input hidden value="<%= pubs.phone %>" name="phone"/>
-    <input hidden value="<%= pubs.id %>" name="pubId"/>
-    <button type="submit" class="btn btn-outline-success btn-sm"> Add to your favorites</button>
-</form>
+    <form method="POST" action="/pubs">
+        <input hidden value="<%= pubs.name%>" name="name"/>
+        <input hidden value="<%= pubs.brewery_type %>" name="brewery_type"/> 
+        <input hidden value="<%= pubs.street %>" name="street"/>
+        <input hidden value="<%= pubs.city %>" name="city"/>
+        <input hidden value="<%= pubs.state %>" name="state"/> 
+        <input hidden value="<%= pubs.website_url%>" name="url"/> 
+        <input hidden value="<%= pubs.phone %>" name="phone"/>
+        <input hidden value="<%= pubs.id %>" name="pubId"/>
+         <button type="submit" class="btn btn-outline-success btn-sm"> Add to your favorites</button>
+    </form>
 </div>
-
-<!-- view user comments -->
- <!-- <div>
-     <ul>
-        <% //comments.forEach(comment=>{ %>
-             <li> <%= //pubs.name %> <br>
-              <%= //user.comment%> <br>
-          </li>
-           
-        <% //})%>
-    
-     </ul>
- </div> -->
-
-
-<!-- add user comments -->
