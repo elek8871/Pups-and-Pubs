@@ -1,0 +1,6 @@
+.homePage {
+    background-image:url("./images/dogsatbar.jpeg") !important ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}

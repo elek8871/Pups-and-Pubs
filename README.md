@@ -59,4 +59,5 @@
 ###### Day Four: Comments fully functional. I decided to use a rating scale so I updated the DB to reflect that. I was able to get the delete route to work! Still struggling with the update route. It adds comments but doesn't update
 ###### Day Five: Took a break from coding the project and did Bootstrap for CSS.
 ###### Day Six: Reached MVP today. I feel users may want to add ratings on different dates so I added a visit date to comments. Somehow in the process of updating all those routes the update comments is now functioning so I'm sure there was a syntax error that I fixed. Today the plan is to finish CSS and if time allows work on stretch goals.
-###### Day Seven: Updated the database to fine tune ratings options. Spent most of the day doong styling, I'm not sure how much progress I made style-wise as I was having trouble with adding accordion views. I was unable to deploy my website and now I have a database error so I'm calling it a night.
+###### Day Seven: Updated the database to fine tune ratings options. Spent most of the day doing styling, I'm not sure how much progress I made style-wise as I was having trouble with adding accordion views. I was unable to deploy my website and now I have a database error so I'm calling it a night.
+###### Day Eight: the db issue seems to have resolved itself

@@ -23,29 +23,40 @@
     </div>
 
 
-
+<div class="accordion" id="accordion">
+  <div class="accordion-item">
     <div class="col order-3 p-4">
-      <h5> See Reviews: </h5>
-      <%pub.user_notes.forEach(user_note=>{ %>
-        <div>  
-         <p> Visit Date: <%= user_note.visitDate %></p>
-        </div> 
-        <div>  
+    <h5 class="accordion-header" id="header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#container"
+         > See Reviews</button>
+    </h5>
+    <div id="container" class="accordion-collapse collapse" data-bs-parent="#accordion" aria-labelledby="header">
+      
+      <%pub.user_notes.forEach( (user_note, index) =>{ %> 
+        <div class="accordion-body">
+          <div>  
+          <p> Visit Date: <%= user_note.visitDate %></p>
+          </div> 
+          <div>  
           <p> Pup Friendly: <%= user_note.pupFriendly %> </p> 
-        </div>
-        <div> 
+          </div>
+          <div> 
           <p> Beer Rating: <%= user_note.beers %> </p>
-        </div>
-        <div> 
+          </div>
+          <div> 
           <p> Food Rating: <%= user_note.food %> </p>
-        </div>
-        <div>
+          </div>
+          <div>
           <p> Other Comments: <%= user_note.comments %></p>
           <a href ="/user_notes/edit/<%= pub.id %>"> <button class="btn btn-outline-success btn-sm" > Edit Comments </button> </a> 
-        </div>
-        <% })%> 
+          </div>
+      </div>
+      
+      <% })%> 
+    </div>
+      </div>   
     </div>    
-
+</div>
 
 
 
@@ -56,23 +67,23 @@
       <form method="POST" action="/user_notes">
     <div>  
       <label for="visitDate"> Visit Date:</label>
-      <input type="date" name="visitDate"> 
+      <input type="date" name="visitDate" required> 
     </div> 
     <div>  
       <label for="pupFriendly"> How pup friendly is this pub?:</label>
-      <input type="number" max="5" min="0"name="pupFriendly">
+      <input type="number" max="5" min="0"name="pupFriendly" required>
     </div> 
     <div> 
       <label for="beers"> Were the beers tasty?:</label>
-      <input type="number" max="5" min="0" name="beers" >         
+      <input type="number" max="5" min="0" name="beers"required >         
     </div> 
     <div>   
       <label for="food">How was the food?:</label>
-      <input type="number" max="5" min="0" name="food">
+      <input type="number" max="5" min="0" name="food" required>
     </div>  
     <div>  
       <label for="comments">Other comments here:</label>
-      <textarea cols="30" rows="3" name="comments"></textarea>
+      <textarea cols="30" rows="3" name="comments" required></textarea>
     </div> 
     <div>
       <input hidden value= "<%= pub.id %>" name="pubId"/> 
