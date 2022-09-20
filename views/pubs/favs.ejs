@@ -6,7 +6,7 @@
   </div>
 
 
-  <div class="row align-items start">
+  <div class="row">
 
     <div class="col p-4">
         <!-- list of fav pubs by ID div on left -->
@@ -21,7 +21,7 @@
           <form method="POST" action="/pubs/<%= pub.id %>/?_method=DELETE">
           <input type="submit" class="btn btn-outline-danger btn-sm" value="Delete From Favorites">
         </form>
-    </div>
+     </div>
 
 
   <div class="col order-3 p-4">
@@ -88,8 +88,10 @@
       <input type="submit" class="btn btn-outline-success btn-sm"  value="Add your comments">
     </div>  
   </div>  
-      <% }) %>
 </div>
+<% }) %>
+</div>
+
 
   
 

@@ -38,10 +38,13 @@
 ##### -DRY HTML, CSS, and back-end code
 ##### -Be deployed online and accessible to the public
 
-### Stretch
-##### -Incorporate a second API - adding dog jokes
+### Stretch/Future plans
+##### - Incorporate a second API - adding dog jokes
 ##### - Add a url scrub feature allowing the user to search directly for pup friendly pubs
 ##### - Add a map feature
+##### - Continue to stylize this project so it looks more engaging
+##### - Have user reviews display when user does initial query
+
 
 ### Installation instructions:
 ##### -Fork and clone repository
@@ -60,4 +63,8 @@
 ###### Day Five: Took a break from coding the project and did Bootstrap for CSS.
 ###### Day Six: Reached MVP today. I feel users may want to add ratings on different dates so I added a visit date to comments. Somehow in the process of updating all those routes the update comments is now functioning so I'm sure there was a syntax error that I fixed. Today the plan is to finish CSS and if time allows work on stretch goals.
 ###### Day Seven: Updated the database to fine tune ratings options. Spent most of the day doing styling, I'm not sure how much progress I made style-wise as I was having trouble with adding accordion views. I was unable to deploy my website and now I have a database error so I'm calling it a night.
-###### Day Eight: the db issue seems to have resolved itself
+###### Day Eight: the db issue seems to have resolved itself. I was able to have the reviews expand and collapse using an accoridion. I am relatively happy with my project. There is a lot of styling I would like to get done in the future.
+
+###### Post-project: I am happy with how this turned out and proud of what I have created. I wa able to overcome my stumbling blocks and not get stuck on  things. I discovered I really enjoy the backend programming. 
+
+

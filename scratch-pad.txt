@@ -16,3 +16,6 @@ pub:
 sequelize model:create --name pub  --attributes obdbId:string,name:string,address:string,phone:string
 
 https://api.openbrewerydb.org/breweries/{obdb-id}
+
+flyctl deploy
+fly logs

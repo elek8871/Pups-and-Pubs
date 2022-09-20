@@ -5,9 +5,10 @@
     <div class="fw-light text-secondary"><%= pubs.street %> </div>
     <div class="fw-light text-secondary"> <%= pubs.city %></div>
     <div class="fw-light text-secondary"> <%= pubs.state %> </div>
-    <div class="fw-light text-secondary"> Website:  <a href= "<%= pubs.website_url %>" target="_blank">
+    <div class="fw-light text-secondary"> Website:  <a href="<%= pubs.website_url %>" target="_blank">
         <%= pubs.website_url %> </a> </div> 
     <div class="fw-light text-secondary">Phone: <%= pubs.phone %> </div>
+
 <!--  add brewery to user favorites -->
     <form method="POST" action="/pubs">
         <input hidden value="<%= pubs.name%>" name="name"/>
@@ -18,6 +19,6 @@
         <input hidden value="<%= pubs.website_url%>" name="url"/> 
         <input hidden value="<%= pubs.phone %>" name="phone"/>
         <input hidden value="<%= pubs.id %>" name="pubId"/>
-         <button type="submit" class="btn btn-outline-success btn-sm"> Add to your favorites</button>
+         <button type="submit" class="btn btn-outline-success btn-sm"> Add to your list:</button>
     </form>
 </div>

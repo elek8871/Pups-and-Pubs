@@ -1,6 +1,6 @@
 const axios = require('axios')
 
-axios.get ('https://api.openbrewerydb.org/breweries?by_city=austin&per_page=3') 
+axios.get ('https://api.openbrewerydb.org/breweries?by_city=denver&per_page=3') 
   .then(function(response) {
     // return response.json();
     console.log(response.data)

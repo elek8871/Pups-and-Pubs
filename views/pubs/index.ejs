@@ -5,16 +5,14 @@
 <div>
     <ul>
        <% pubs.forEach(pub=>{ %>
-            <li> <div class=" text-success fw-semibold"> <%= pub.name %></div> 
+            <li><div class=" text-success fw-semibold"> <%= pub.name %></div> 
                 <div class="fw-light text-secondary"> <%= pub.street %> </div>
                 <div class="fw-light text-secondary"> <%= pub.city %> </div>
-                <div class="fw-light text-secondary "> <%= pub.state %> </div>
-            <a href = "/pubs/details/<%= pub.id %>" class="btn btn-sm btn-outline-success"> More Information</a>
+                <div class="fw-light text-secondary"> <%= pub.state %> </div>
+            <a href="/pubs/details/<%= pub.id %>" class="btn btn-sm btn-outline-success"> More Information</a>
             <br>
         </li>
-       
        <% })%>
-    
     </ul>
 </div>
 </div>
