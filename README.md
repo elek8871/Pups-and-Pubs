@@ -42,6 +42,7 @@
 ### Stretch/Future plans
 ##### - Incorporate a second API - adding dog jokes
 ##### - Add a url scrub feature allowing the user to search directly for pup friendly pubs
+##### -add the ability to search for a pub by name
 ##### - Add a map feature
 ##### - Continue to stylize this project so it looks more engaging
 ##### - Have user reviews display when user does initial query
