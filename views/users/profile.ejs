@@ -1,20 +1,22 @@
-<!-- <style>
+<style>
     body{
-    background-image:url("/images/dogwithbeers.jpeg") !important ;
+    background-image:url("/images/beersonbar.png") !important ;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    
   }
-  </style> -->
+  </style>
+  </style>
 
-<div class="profile" id="profile">
+<div class="profile mb-3" id="profile">
 
     <div class="container">
      <h1 class="lead text-white text-center display-4">  🐾 Welcome to Pups & Pubs  <%= user.email %> 🐾 </h1>
 
         <!-- link to favorite pubs -->
-        <p class="text-secondary text-center"> 
-        <a href = "/users/favs" class="text-secondary"> Click to see your list of pubs</a> 
+        <p class="text-white text-center"> 
+        <a href = "/users/favs" class="text-dark"> Click to see your list of pubs</a> 
         </p>
 <!-- add a form for to add a new pub here -->
     </div>
@@ -22,7 +24,7 @@
 
 <!-- search for pubs -->
     <div class="container">
-        <p class="text-secondary"> Search for a pup friendly pub near you</p>
+        <p class="text-white"> Search for a pup friendly pub near you</p>
         <div class="mb-3" style="width:20%" >
             <form method="GET" action="/pubs/index">
                 <label for = "search-input" class="form-label text-secondary"> Search: </label>
