@@ -1,13 +1,22 @@
 <!-- lists information about a specific pub from user favorites-->
-<div class="container my-5 text-center m-5">
+  <style>
+    body{
+    background-image:url("/images/beersonbar.png") !important ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  </style>
 
+
+<div class="container my-5 text-center m-5">
   <div class="col">
     <h2> Your Favorite Pubs</h2>
   </div>
-</div>
 
 
-  <div class="row">
+
+  <div class="row m-5 text-center text-white">
   <!-- list of fav pubs by ID div on left -->
   <% user.pubs.forEach(pub =>{ %>
       <div class="col p-4 border-dark">
@@ -25,14 +34,14 @@
         </form>
 
 
-     <div class="accordion" id="accordion">
+     <div class="accordion text-center"  id="accordion">
        <div class="accordion-item">
           <h5 class="accordion-header" id="header">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#container"> See Reviews</button>
             </h5>
           <div id="container" class="accordion-collapse collapse" data-bs-parent="#accordion" aria-labelledby="header">
             <%pub.user_notes.forEach( (user_note, index) =>{ %> 
-        <div class="col order-3 p-4 border-dark">
+        <div class="col p-4 border-dark">
               <div class="accordion-body">
                   <div>  <p> Visit Date: <%= user_note.visitDate %></p> </div> 
                   <div>  <p> Pup Friendly: <%= user_note.pupFriendly %> </p> </div>
@@ -53,7 +62,7 @@
 
 
 <!-- div below -->
-  <div class="col order-2 p-4 row border-dark">
+  <div class="col p-4 row border-dark">
     <h5> Your thoughts:</h5>
     <h6> On a scale of 1 to 5 🐾: </h6>
       <form method="POST" action="/user_notes">
@@ -82,9 +91,10 @@
       <input type="submit" class="btn btn-outline-success btn-sm"  value="Add your comments">
     </div>  
   </div>  
-  
 </div>
 <% }) %>
+
+</div>
 
 
 
