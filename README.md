@@ -2,6 +2,7 @@
 #### Do you love socializing with your friends with an ice cold beer? Do you want to take your best friend with you? Pups and Pubs is an application for finding pup friendly venues near you.
 #### Users can search for a local pub, add the pub to their favorite list, leave comments on the pub , rate it's pup-friendliness, and add pubs to their list.
 
+#### https://pubs-and-pubs.fly.dev/
 
 ### Wireframes
 ![20220913_091058 Small](https://user-images.githubusercontent.com/110848452/189954980-796fb0e6-703e-4930-95a1-9c00d8735f6b.jpeg)

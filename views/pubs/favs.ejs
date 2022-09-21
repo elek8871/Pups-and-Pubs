@@ -6,52 +6,45 @@
   </div>
 
 
-  <div class="row">
-
-    <div class="col p-4">
-        <!-- list of fav pubs by ID div on left -->
-        <% user.pubs.forEach(pub =>{ %>
+  
+  <!-- list of fav pubs by ID div on left -->
+  <% user.pubs.forEach(pub =>{ %>
+    
+    <div class="row border-dark">
+      <div class="col p-4">
           <h4> <%= pub.name%> </h4>
           <div> <%= pub.street%> </div>
           <div> <%= pub.city%> </div>
           <div> <%= pub.state %></div>
           <div> Phone: <%= pub.phone %>  </div>
           <div> Website: <a href= "<%= pub.website_url %>" target="_blank"><%= pub.website_url %></a></div>
+        </div>
+        
         </form>   
           <form method="POST" action="/pubs/<%= pub.id %>/?_method=DELETE">
           <input type="submit" class="btn btn-outline-danger btn-sm" value="Delete From Favorites">
         </form>
-     </div>
 
 
-  <div class="col order-3 p-4">
-    <div class="accordion" id="accordion">
-      <div class="accordion-item">
-        <h5 class="accordion-header" id="header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#container"> See Reviews</button>
-        </h5>
-    <div id="container" class="accordion-collapse collapse" data-bs-parent="#accordion" aria-labelledby="header">
-      <%pub.user_notes.forEach( (user_note, index) =>{ %> 
-        <div class="accordion-body">
-            <div>  
-            <p> Visit Date: <%= user_note.visitDate %></p>
-            </div> 
-            <div>  
-            <p> Pup Friendly: <%= user_note.pupFriendly %> </p> 
-            </div>
-            <div> 
-            <p> Beer Rating: <%= user_note.beers %> </p>
-            </div>
-            <div> 
-            <p> Food Rating: <%= user_note.food %> </p>
-            </div>
-            <div>
-            <p> Other Comments: <%= user_note.comments %></p>
-            <a href ="/user_notes/edit/<%= pub.id %>"> <button class="btn btn-outline-success btn-sm" > Edit Comments </button> </a> 
+     <div class="accordion" id="accordion">
+       <div class="accordion-item">
+          <h5 class="accordion-header" id="header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#container"> See Reviews</button>
+            </h5>
+          <div id="container" class="accordion-collapse collapse" data-bs-parent="#accordion" aria-labelledby="header">
+            <%pub.user_notes.forEach( (user_note, index) =>{ %> 
+              <div class="col order-3 p-4">
+              <div class="accordion-body">
+                  <div>  <p> Visit Date: <%= user_note.visitDate %></p> </div> 
+                  <div>  <p> Pup Friendly: <%= user_note.pupFriendly %> </p> </div>
+                  <div> <p> Beer Rating: <%= user_note.beers %> </p> </div>
+                  <div> <p> Food Rating: <%= user_note.food %> </p> </div>
+                  <div> <p> Other Comments: <%= user_note.comments %></p>
+                  <a href ="/user_notes/edit/<%= pub.id %>"> <button class="btn btn-outline-success btn-sm" > Edit Comments </button> </a> 
           </div>
     </div>
+  </div>
         <% })%> 
-    </div>
       </div>   
     </div>    
   </div>
