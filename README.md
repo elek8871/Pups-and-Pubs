@@ -48,10 +48,18 @@
 ##### - Have user reviews display when user does initial query
 
 
-### Installation instructions:
-##### -Fork and clone repository
-##### -Install the following dependencies: NPM, express, ejs layouts, axios, crypto, method-overide
-##### -
+### To install Pups and Pubs:
+##### 1.Fork and clone repository
+##### 2. In your terminal run command: npm install (this will install all needed packages)
+##### 3. You will need to install a few file for functionality. In your terminal:  touch .gitignore .env 
+##### 4. Add node_modules and .env to your .gitignore file
+##### 5. In the .env file you will need to add an ENC_KEY file
+###### - EX: ENC_KEY = "string"
+###### - you do not need an API key for Open Brewery DB
+##### 6. Create the database and migrate the models into it by running the following commands:
+###### - createdb express_auth_boilerplate
+###### - sequelize db:migrate
+##### 7. run the nodemon and navigate to localHost:3000 in your browser and you are all set! Enjoy!
 
 ### Tech Stack and API
 ##### - node, express, ejs layouts, axios, js, bootstrap css, html, css
